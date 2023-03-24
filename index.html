@@ -2,7 +2,48 @@
 <html lang="en-US">
 
 <head>
-    <title>Language Suggester</title>
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <script src="js/scripts.js"></script>
+  <title>Language Suggester</title>
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/scripts.js"></script>
 </head>
+
+<body>
+  <h1>
+    Language Suggester
+  </h1>
+
+  <h2>
+    Hey there developer, wanna learn to code but don't know where to start? Take this quiz to see whice language is
+    right
+    for you!
+  </h2>
+
+  <form id="quiz">
+    <h3>Let's start with the name. Type your name below.</h3>
+    <label for="nameInput"></label>
+    <input id="nameInput" type="text" name="nameInput">
+
+    <h3>How much experience do you have with programming?</h3>
+    <select id="experience">
+      <option value="1">Beginner (0-2 years)</option>
+      <option value="2">Intermediate (2-3 years)</option>
+      <option value="3">Expert (4+ years)</option>
+    </select>
+
+    <h3>If you had to pick a place to visit, where would you go?</h3>
+    <input type="radio" name="location" value="france">
+    Paris, france
+    <input type="radio" name="location" value="germany">
+    Berlin, Germany
+    <br>
+    <br>
+    <button type="submit" class="btn">Show me the results!</button>
+
+    <div id="result" class="hidden">
+      <h3>Here is my language suggestion for you <span id="name">____</span>!</h3>
+      <p>After deliberation, I recommend:
+      <p id="output1a"></strong></p>
+      <p>So go try out <span id="output1b"></span> for <span id="time"></span> day(s)!</p>
+    </div>
+  </form>
+</body>
