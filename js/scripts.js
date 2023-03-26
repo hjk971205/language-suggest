@@ -42,7 +42,6 @@ function languageSuggest(event) {
 
 //Interface Logic
 window.addEventListener("load", function () {
-
   const form = document.getElementById("quiz");
   form.addEventListener("submit", languageSuggest);
 });
