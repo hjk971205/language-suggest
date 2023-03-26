@@ -35,9 +35,6 @@ function languageSuggest(event) {
     language = "C#";
   }
 
-  if (options === undefined) {
-    window.alert("Please fill out missing area!");
-} 
   document.getElementById("output1a").innerText = language;
   document.getElementById("output1b").innerText = language;
   document.querySelector("div#result").removeAttribute("class");
