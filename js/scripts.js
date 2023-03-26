@@ -22,7 +22,7 @@ function languageSuggest(event) {
     }
   } else {
     if (potential === "beginner") {
-      langage = "Java";
+      langage = "Java"; 
     }
   }
 }
