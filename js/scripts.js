@@ -16,16 +16,33 @@ function languageSuggest(event) {
 
   let language;
   const location = document.querySelector("input[name= 'location']:checked").value;
-  if (location === "france") {
-    if (potential === "beginner") {
-      language = "HTML";
-    }
-  } else {
-    if (potential === "beginner") {
-      langage = "Java"; 
-    }
+  if (location === "france" && potential === "beginner") {
+    language = "HTML";
+  } 
+  if (location === "germany" && potential === "beginner") {
+    language = "Java";
   }
+
+  if (location === "france" && potential === "intermediate") {
+    language = "React";
+  } else if (location === "germany" && potential === "intermediate") {
+    language = "Python";
+  }
+
+  if (location === "france" && potential === "expert") {
+    language = "RUBY";
+  } else if (location === "germany" && potential === "expert") {
+    language = "C#";
+  }
+
+  document.getElementById("output1a").innerText = language;
+  document.getElementById("output1b").innerText = language;
+  document.querySelector("div#result").removeAttribute("class");
 }
 
-
 //Interface Logic
+window.addEventListener("load", function () {
+
+  const form = document.getElementById("quiz");
+  form.addEventListener("submit", languageSuggest);
+});
