@@ -4,6 +4,9 @@ function languageSuggest(event) {
   const nameInput = document.getElementById("nameInput").value;
   document.querySelector("span#name").innerText = nameInput;
 
+  const numberInput = parseInt(document.querySelector("input#numberInput").value);
+  document.querySelector("span#time").innerText = numberInput;
+
   let potential;
   const experience = document.getElementById("experience").value;
   if (experience === "1") {
@@ -18,7 +21,7 @@ function languageSuggest(event) {
   const location = document.querySelector("input[name= 'location']:checked").value;
   if (location === "france" && potential === "beginner") {
     language = "HTML";
-  } 
+  }
   if (location === "germany" && potential === "beginner") {
     language = "Java";
   }
