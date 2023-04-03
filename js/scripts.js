@@ -23,19 +23,11 @@ function languageSuggest(event) {
     language = "HTML";
   } else if (location === "germany" && potential === "beginner") {
     language = "Java";
-  } else {
-    window.alert("ERROR!");
-  }
-
-  if (location === "france" && potential === "intermediate") {
+  } else if (location === "france" && potential === "intermediate") {
     language = "React";
   } else if (location === "germany" && potential === "intermediate") {
     language = "Python";
-  } else {
-    window.alert("ERROR!");
-  }
-
-  if (location === "france" && potential === "expert") {
+  } else if (location === "france" && potential === "expert") {
     language = "RUBY";
   } else if (location === "germany" && potential === "expert") {
     language = "C#";
