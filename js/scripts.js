@@ -21,21 +21,26 @@ function languageSuggest(event) {
   const location = document.querySelector("input[name= 'location']:checked").value;
   if (location === "france" && potential === "beginner") {
     language = "HTML";
-  }
-  if (location === "germany" && potential === "beginner") {
+  } else if (location === "germany" && potential === "beginner") {
     language = "Java";
+  } else {
+    window.alert("ERROR!");
   }
 
   if (location === "france" && potential === "intermediate") {
     language = "React";
   } else if (location === "germany" && potential === "intermediate") {
     language = "Python";
+  } else {
+    window.alert("ERROR!");
   }
 
   if (location === "france" && potential === "expert") {
     language = "RUBY";
   } else if (location === "germany" && potential === "expert") {
     language = "C#";
+  } else {
+    window.alert("ERROR!");
   }
 
   document.getElementById("output1a").innerText = language;
