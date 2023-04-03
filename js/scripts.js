@@ -38,6 +38,25 @@ function languageSuggest(event) {
   document.getElementById("output1a").innerText = language;
   document.getElementById("output1b").innerText = language;
   document.querySelector("div#result").removeAttribute("class");
+
+  const wikiLink = document.getElementById("wikiLink");
+  if (language === "HTML") {
+    wikiLink.href = "https://en.wikipedia.org/wiki/HTML";
+  } else if (language === "Java") {
+    wikiLink.href = "https://en.wikipedia.org/wiki/Java_(programming_language)";
+  } else if (language === "React") {
+    wikiLink.href = "https://en.wikipedia.org/wiki/React_(JavaScript_library)";
+  } else if (language === "Python") {
+    wikiLink.href = "https://en.wikipedia.org/wiki/Python_(programming_language)";
+  } else if (language === "RUBY") {
+    wikiLink.href = "https://en.wikipedia.org/wiki/Ruby_(programming_language)";
+  } else if (language === "C#") {
+    wikiLink.href = "https://en.wikipedia.org/wiki/C_Sharp_(programming_language)";
+  } else {
+    wikiLink.href = "#";
+  }
+  document.getElementById("languageLink").innerText = language;
+
 }
 
 //Interface Logic
