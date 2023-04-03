@@ -1,4 +1,13 @@
 //Business Logic
+function generateRandomColor() {
+  const hexDigits = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += hexDigits[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
 function languageSuggest(event) {
   event.preventDefault();
   const nameInput = document.getElementById("nameInput").value;
@@ -56,7 +65,9 @@ function languageSuggest(event) {
     wikiLink.href = "#";
   }
   document.getElementById("languageLink").innerText = language;
-
+  const resultDiv = document.getElementById('result');
+  resultDiv.style.backgroundColor = generateRandomColor();
+  resultDiv.removeAttribute('class');
 }
 
 //Interface Logic
