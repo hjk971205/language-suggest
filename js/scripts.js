@@ -11,9 +11,17 @@ function generateRandomColor() {
 function languageSuggest(event) {
   event.preventDefault();
   const nameInput = document.getElementById("nameInput").value;
+  if (!nameInput) {
+    alert('Please enter your name.');
+    return;
+  }
   document.querySelector("span#name").innerText = nameInput;
 
   const numberInput = parseInt(document.querySelector("input#numberInput").value);
+  if (isNaN(numberInput) || numberInput < 1 || numberInput > 10) {
+    alert('Please enter a valid number between 1 and 10.');
+    return;
+  }
   document.querySelector("span#time").innerText = numberInput;
 
   let potential;
