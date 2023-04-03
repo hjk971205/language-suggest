@@ -1,4 +1,17 @@
 //Business Logic
+const quotes = [
+  "The greatest glory in living lies not in never falling, but in rising every time we fall. -Nelson Mandela",
+  "The way to get started is to quit talking and begin doing. -Walt Disney",
+  "If life were predictable it would cease to be life, and be without flavor. -Eleanor Roosevelt",
+  "If you look at what you have in life, you'll always have more. If you look at what you don't have in life, you'll never have enough. -Oprah Winfrey",
+  "If you set your goals ridiculously high and it's a failure, you will fail above everyone else's success. -James Cameron",
+  "Life is what happens when you're busy making other plans. -John Lennon",
+  "Spread love everywhere you go. Let no one ever come to you without leaving happier. -Mother Teresa",
+  "When you reach the end of your rope, tie a knot in it and hang on. -Franklin D. Roosevelt",
+  "The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart. -Helen Keller",
+  "Believe you can and you're halfway there. -Theodore Roosevelt"
+];
+
 function generateRandomColor() {
   const hexDigits = '0123456789ABCDEF';
   let color = '#';
@@ -81,5 +94,7 @@ function languageSuggest(event) {
 //Interface Logic
 window.addEventListener("load", function () {
   const form = document.getElementById("quiz");
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+  document.getElementById("quote").innerText = quotes[randomIndex];
   form.addEventListener("submit", languageSuggest);
 });
